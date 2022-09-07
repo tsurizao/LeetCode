@@ -20,5 +20,15 @@ public class EvenNumberDigits {
 //    Constraints:
 //            1 <= nums.length <= 500
 //            1 <= nums[i] <= 105
-
+    public static int evenNumberDigits(int[] nums) {
+        int evenDigitNums = 0;
+        for (int num : nums) {
+            int digitCount = 0;
+            for (int j = num; j > 0; j /= 10) {
+                digitCount++;
+            }
+            if (digitCount % 2 == 0) evenDigitNums++;
+        }
+        return evenDigitNums;
+    }
 }
