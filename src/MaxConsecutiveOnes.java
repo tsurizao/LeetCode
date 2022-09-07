@@ -13,18 +13,16 @@ public class MaxConsecutiveOnes {
 //    nums[i] is either 0 or 1.
 
     public static int MaxConsecutiveOnes(int[] nums) {
-        int consecutiveCount = 0;
-        int maxCount = 0;
+        int count = 0;
+        int max = 0;
         for (int num : nums) {
-            if (num == 1) {
-                consecutiveCount++;
-                if (maxCount < consecutiveCount) {
-                    maxCount = consecutiveCount;
-                }
+            if (num == 0) {
+                count = 0;
             } else {
-                consecutiveCount = 0;
+                count++;
+                max = Math.max(count, max);
             }
         }
-        return maxCount;
+        return max;
     }
 }
