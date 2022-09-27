@@ -14,15 +14,6 @@ public class MergeSortedArrays {
             nums1[m] = i;
             m++;
         }
-        // second loop handles organizing numbers
-        for (int i = 0; i < nums1.length - 1; i++) {
-            int temp;
-            if (nums1[i] > nums1[i + 1]) {
-                temp = nums1[i + 1];
-                nums1[i + 1] = nums1[i];
-                nums1[i] = temp;
-            }
-        }
-        System.out.println(Arrays.toString(nums1));
+        Arrays.sort(nums1);
     }
 }
