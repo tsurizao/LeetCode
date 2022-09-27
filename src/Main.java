@@ -17,10 +17,19 @@ public class Main {
 //        int[] nums1 = {1,2,3,0,0,0}; int m = 3; int[] nums2 = {2, 5, 6}; int n = 3;
 //        MergeSortedArrays.merge(nums1, m, nums2, n);
 
-        int[] nums1 = {4, 5, 6, 0, 0, 0};
-        int m = 3;
-        int[] nums2 = {1, 2, 3};
-        int n = 3;
-        MergeSortedArrays.merge(nums1, m, nums2, n);
+//        int[] nums1 = {4, 5, 6, 0, 0, 0};
+//        int m = 3;
+//        int[] nums2 = {1, 2, 3};
+//        int n = 3;
+//        MergeSortedArrays.merge(nums1, m, nums2, n);
+
+        int[] nums = {0, 1, 2, 2, 3, 0, 4, 2};
+        int val = 2;
+        RemoveElement.removeElement(nums, val);
+//        Output: 5, nums = [0, 1, 4, 0, 3, _, _, _]
+//        Explanation:
+//        Your function should return k = 5,with the first five elements of nums containing 0, 0, 1, 3, and 4.
+//        Note that the five elements can be returned in any order.
+//        It does not matter what you leave beyond the returned k (hence they are underscores).
     }
 }
