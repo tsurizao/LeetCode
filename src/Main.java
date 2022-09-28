@@ -27,7 +27,12 @@ public class Main {
 //        int val = 2;
 //        RemoveElement.removeElement(nums, val);
 
-        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+//        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+//        int[] nums = {1, 1, 2};
+//        int[] nums = {1};
+//        int[] nums = {1, 2};
+//        int[] nums = {1, 1};
+        int[] nums = {1, 1, 2, 3};
         RemoveDuplicates.removeDuplicates(nums);
     }
 }
