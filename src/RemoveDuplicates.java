@@ -12,20 +12,15 @@ public class RemoveDuplicates {
 //    Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
     public static int removeDuplicates(int[] nums) {
-        int k = 0;
         System.out.println(Arrays.toString(nums));
-        if (nums.length - 1 == 0) {
-            System.out.println(k + 1);
-            return k + 1;
-        }
-        for (int i = 0; i < nums.length; i++) {
-            if (i == nums.length - 1) {
-                nums[k] = nums[i];
-            } else if (nums[k] != nums[i]) {
-
-                nums[k] = nums[i];
-            } else {
+        int k = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[k] != nums[k + 1]) {
                 k++;
+            } else {
+                for (int j = k; j < nums.length - 1; j++) {
+                    nums[j] = nums[j + 1];
+                }
             }
         }
         System.out.println(Arrays.toString(nums));
