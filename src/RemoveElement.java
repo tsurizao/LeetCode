@@ -10,16 +10,14 @@ public class RemoveElement {
 //
 //    Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 
-    public static int removeElement(int[] nums, int val) {
+    public static int[] removeElement(int[] nums, int val) {
         int k = 0;
         for (int i = 0; i < nums.length; i++) {
-            System.out.println(i);
-            System.out.println(k);
             if (nums[i] != val) {
                 nums[k] = nums[i];
                 k++;
             }
         }
-        return k;
+        return nums;
     }
 }
