@@ -1,20 +1,24 @@
 public class MoveZeroes {
-    public static int[] moveZeroes(int[] arr) {
-        int end = arr.length - 1;
-        for (int i = 0; i < arr.length - 1; i+=0) {
-            if (arr[i] == 0) {
-                for (int j = i; j < arr.length - 1; j++) {
-                    arr[j] = arr[j + 1];
+
+    //    Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+//
+//    Note that you must do this in-place without making a copy of the array.
+    public static int[] moveZeroes(int[] nums) {
+        int reverseIndex = nums.length - 1;
+        for (int i = 0; i < nums.length - 1; i += 0) {
+            if (nums[i] == 0) {
+                for (int j = i; j < nums.length - 1; j++) {
+                    nums[j] = nums[j + 1];
                 }
-                arr[arr.length - 1 - i] = 0;
-                end--;
-                if(i == end){
-                    break;
-                }
-            } else {
+                nums[reverseIndex - i] = 0;
+            }
+            if (nums[i] != 0) {
                 i++;
             }
+            if (i == reverseIndex - 1) {
+                break;
+            }
         }
-        return arr;
+        return nums;
     }
 }
