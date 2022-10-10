@@ -2,6 +2,10 @@ import java.util.Arrays;
 
 public class ReplaceWithGreatestElement {
 
+//    Given an array arr, replace every element in that array with the greatest element among the elements to its right, and replace the last element with -1.
+//
+//    After doing so, return the array.
+
     public static int[] replaceElement(int[] arr) {
         int index = 1;
         for (int i = 0; i < arr.length; i++) {

@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class CheckIfNAndItsDoubleExist {
+
     // Given an array arr of integers, check if there exist two indices i and j such that :
 
     public static boolean checkIfExists(int[] arr) {
