@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FindDisappearedNumbers {
+
+    // TODO this is currently not working... like at all
     public static List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> missingNumbers = new ArrayList<>();
         Arrays.sort(nums);
