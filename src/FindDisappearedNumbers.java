@@ -1,30 +1,24 @@
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class FindDisappearedNumbers {
 
     public static List<Integer> findDisappearedNumbers(int[] nums) {
-        System.out.println("Original" + Arrays.toString(nums));
+        //TODO still working on a solution, done for day
         List<Integer> missingNumbers = new ArrayList<>();
-        if (nums.length <= 1 || nums.length >= Math.pow(10, 5)) {
-            return missingNumbers;
-        }
-        for (int num : nums) {
-            if (!missingNumbers.contains(num)) {
-                missingNumbers.add(num);
+        Arrays.sort(nums);
+        System.out.println("nums" + Arrays.toString(nums));
+        int k = 1;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i; j < nums.length; j++) {
+                if (nums[j] == k) {
+                    nums[j] = 1;
+                }
             }
+            k++;
         }
-        System.out.println("Distinct" + missingNumbers);
-        for (int i = 1; i <= nums.length; i++) {
-            if (missingNumbers.contains(i)) {
-                missingNumbers.remove((Integer) i);
-            } else {
-                missingNumbers.add(i);
-            }
-        }
+        System.out.println("numbersFound" + Arrays.toString(nums));
         System.out.println("Missing" + missingNumbers);
         return missingNumbers;
     }
