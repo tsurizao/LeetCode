@@ -4,6 +4,8 @@ import java.util.List;
 
 public class FindDisappearedNumbers {
 
+//    Given an array nums of n integers where nums[i] is in the range [1, n], return an array of all the integers in the range [1, n] that do not appear in nums.
+
     public static List<Integer> findDisappearedNumbers(int[] nums) {
         //TODO still working on a solution
         System.out.println("Numbers Found: " + Arrays.toString(nums));
