@@ -8,20 +8,27 @@ public class FindDisappearedNumbers {
         //TODO still working on a solution
         System.out.println("Numbers Found: " + Arrays.toString(nums));
         Arrays.sort(nums);
-        nums = Arrays.stream(nums).distinct().toArray();
-        System.out.println("Array" + Arrays.toString(nums));
-        List<Integer> missingNumbers = new ArrayList<>();
-
-        int k = 1;
         for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i + 1] - nums[i] != 1) {
-                System.out.println(nums[i + 1] + " - " + nums[i] + " = " + (nums[i + 1] - nums[i]));
-                missingNumbers.add(i + 2);
+            if (nums[i] == nums[i + 1]) {
+                for (int j = i; j < nums.length - 1; j++) {
+                    nums[j] = nums[j + 1];
+                }
+                nums[nums.length - 1] = 0;
             }
         }
 
-        System.out.println(Arrays.toString(nums));
-        System.out.println(missingNumbers);
+        System.out.println("Sorted " + Arrays.toString(nums));
+        int k = 0;
+        List<Integer> missingNumbers = new ArrayList<>();
+        for (int i = 1; i <= nums.length; i++) {
+            if (nums[k] != i) {
+                missingNumbers.add(i);
+            } else {
+                k++;
+            }
+        }
+
+        System.out.println("Missing Numbers" + missingNumbers);
         return missingNumbers;
     }
 }
