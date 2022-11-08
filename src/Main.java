@@ -7,8 +7,12 @@ public class Main {
 //        int high = 7;
 //        int low = 8;
 //        int high = 10;
-        int low = 2;
-        int high = 9;
+//        int low = 2;
+//        int high = 9;
+//        int low = 11;
+//        int high = 11;
+        int low = 8;
+        int high = 8;
         System.out.println(CountOddNumbersInAnIntervalRange.countOdds(low, high));
     }
 }
