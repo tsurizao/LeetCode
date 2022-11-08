@@ -1,11 +1,14 @@
 public class ReverseInteger {
     public static int reverse(int x) {
-        int y = 0;
-        for (int i = 0; x != 0; i++) {
+        double y = 0;
+        while (x != 0) {
+            y *= 10;
             y += x % 10;
-            x= x / 10;
+            x = x / 10;
         }
-        System.out.println(y);
-        return y;
+        if (y < -2147483648 || y > 2147483647) {
+            y = 0;
+        }
+        return (int) y;
     }
 }
