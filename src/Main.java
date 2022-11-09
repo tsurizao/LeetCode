@@ -3,9 +3,12 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         // Using this space to test solution classes
-        String s = "III"; // 3
-//        String s = "LVIII"; // 58
-//        String s = "MCMXCIV"; // 1994
-        System.out.println(RomanToInteger.romanToInt(s));
+        double x = 2.0;
+        int n = 10;
+//        double x = 2.1;
+//        int n = 3;
+//        double x = 2;
+//        int n = -2;
+        System.out.println(PowXN.powXN(x, n));
     }
 }
