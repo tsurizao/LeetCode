@@ -7,28 +7,24 @@ public class LongestCommonPrefix {
             return strs[0];
         }
 
-        String longestPrefix = "";
         String smallestString = strs[0];
-        boolean conditionalBreak = false;
-
         for (String str : strs) {
             if (str.length() < smallestString.length()) {
                 smallestString = str;
             }
         }
-        for (int i = 0; i < strs.length - 1; i++) {
-            System.out.println("Loop " + i);
-            String tempPrefix = "";
-            for (int j = 0; j < smallestString.length(); j++) {
-                if (strs[i].charAt(j) == strs[i + 1].charAt(j)) {
-                    tempPrefix += strs[i].charAt(j);
-                } else {
-                    break;
+        System.out.println("Smallest String Length = " + smallestString.length());
+
+        for (int i = 0; i < strs.length;i++) {
+            for (int j = smallestString.length(); j = smallestString.length(); j--) {
+                System.out.println("yo");
+                System.out.println("J = " + strs[j]);
+                System.out.println("J + 1 = " + strs[j + 1]);
+                if (strs[j].substring(0, smallestString.length()).equals(strs[j + 1].substring(0, smallestString.length()))) {
+                    System.out.println("substring" + strs[j].substring(0, smallestString.length()));
                 }
             }
-            System.out.println("temp prefix = " + tempPrefix);
-            longestPrefix = tempPrefix;
         }
-        return longestPrefix;
+        return "plug in answer here";
     }
 }
