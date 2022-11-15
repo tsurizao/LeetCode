@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class LongestCommonPrefix {
     public static String longestCommonPrefix(String[] strs) {
@@ -7,8 +6,15 @@ public class LongestCommonPrefix {
             return strs[0];
         }
 
+        for(int i = 0;i < strs.length - 1;i++){
+            if(strs[i].equals("")){
+                return strs[i];
+            }
+        }
+
         String longestPrefix = "";
         String smallestString = strs[0];
+        char letterToCheck;
         boolean exitLoop = false;
 
         for (String str : strs) {
@@ -16,22 +22,23 @@ public class LongestCommonPrefix {
                 smallestString = str;
             }
         }
+        int k = 0;
         for (int i = 0; i < strs.length - 1; i++) {
-            if(exitLoop){
-                break;
-            }
-            System.out.println("Loop " + i);
-            String tempPrefix = "";
-            for (int j = 0; j < smallestString.length(); j++) {
-                if (strs[i].charAt(j) == strs[i + 1].charAt(j)) {
-                    tempPrefix += strs[i].charAt(j);
-                } else {
+            System.out.println("I: " + i + " --- K: ");
+            letterToCheck = strs[i].charAt(k);
+            for (int j = 0; j < smallestString.length() - 1; j++) {
+                System.out.println("J: " + j);
+                //loop through each letter of each word
+                if (letterToCheck != strs[k].charAt(j)) {
                     exitLoop = true;
                     break;
                 }
             }
-            System.out.println("temp prefix = " + tempPrefix);
-            longestPrefix = tempPrefix;
+            if (exitLoop) {
+                break;
+            }
+            longestPrefix += letterToCheck;
+            k++;
         }
         return longestPrefix;
     }
