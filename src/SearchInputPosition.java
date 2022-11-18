@@ -4,15 +4,15 @@ public class SearchInputPosition {
 
     public static int searchInsert(int[] nums, int target) {
         int location = 0;
-        for (int i = 0; i < nums.length - 1; i++) {
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i] < target){
+                location++;
+            }
             if(nums[i] == target){
                 return i;
             }
-            if(i == nums.length - 2 && nums[i] < target){
-                return i + 2;
-            }
-            if(nums[i] < target){
-                location++;
+            if(i == nums.length - 1 && nums[i] < target){
+                return i + 1;
             }
         }
         return location;
