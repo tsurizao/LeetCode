@@ -4,7 +4,7 @@ public class PlusOne {
 
     //Increment the large integer by one and return the resulting array of digits.
     public static int[] plusOne(int[] digits) {
-        int number = 0;
+        long number = 0;
         int indices = digits.length;
         int nineCount = 0;
         for (int i = 0; i < digits.length; i++) {
@@ -17,20 +17,24 @@ public class PlusOne {
             }
             number *= 10;
         }
+        System.out.println("Number = " + number);
         number += 1;
-        System.out.println(number);
         if (nineCount == indices) {
             int[] newDigits = new int[indices + 1];
-            for (int i = indices - 1; i >= 0; i--) {
-                newDigits[i] = number % 10;
+            for (int i = indices; i >= 0; i--) {
+                newDigits[i] = (int) number % 10;
                 number /= 10;
             }
             return newDigits;
         }
+        System.out.println("Number = " + number);
         int[] newDigits = new int[indices];
         for (int i = indices - 1; i >= 0; i--) {
-            newDigits[i] = number % 10;
+            System.out.println("number % 10 = " + number % 10);
+            newDigits[i] = (int) (number % 10);
+            System.out.println("newDigits[i] = " + newDigits[i]);
             number /= 10;
+            System.out.println("Number after loop = " + number);
         }
         return newDigits;
     }
