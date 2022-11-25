@@ -7,13 +7,23 @@ public class PlusOne {
     //Increment the large integer by one and return the resulting array of digits.
     public static int[] plusOne(int[] digits) {
         digits[digits.length - 1] += 1;
-        for (int i = 0; i < digits.length - 1; i++) {
-            if (digits[i] == 10) {
-                System.out.println("yo");
-                digits[i] = 0;
-                digits[i + 1] += 1;
+        int[] newDigits = new int[digits.length + 1];
+
+        for (int i = digits.length - 1; i >= 0; i--) {
+            newDigits[i + 1] += digits[i];
+        }
+
+        for(int i = newDigits.length - 1;i >= 0;i--){
+            if(newDigits[i] == 10){
+                newDigits[i] = 0;
+                newDigits[i - 1] += 1;
             }
         }
-        return digits;
+
+        if(newDigits[0] == 0){
+            return digits;
+        } else {
+            return newDigits;
+        }
     }
 }
