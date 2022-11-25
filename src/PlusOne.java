@@ -13,14 +13,23 @@ public class PlusOne {
             newDigits[i + 1] += digits[i];
         }
 
-        for(int i = newDigits.length - 1;i >= 0;i--){
-            if(newDigits[i] == 10){
+        if (digits[0] < 9) {
+            for (int i = digits.length - 1; i >= 0; i--) {
+                if(digits[i] == 10){
+                    digits[i] = 0;
+                    digits[i - 1] += 1;
+                }
+            }
+        }
+
+        for (int i = newDigits.length - 1; i >= 0; i--) {
+            if (newDigits[i] == 10) {
                 newDigits[i] = 0;
                 newDigits[i - 1] += 1;
             }
         }
 
-        if(newDigits[0] == 0){
+        if (newDigits[0] == 0) {
             return digits;
         } else {
             return newDigits;
