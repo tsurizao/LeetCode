@@ -6,13 +6,8 @@ public class PlusOne {
 
     //Increment the large integer by one and return the resulting array of digits.
     public static int[] plusOne(int[] digits) {
-        for (int i = 0; i < digits.length; i++) {
-            System.out.print(digits[i] + ", ");
-        }
-        System.out.println("");
         digits[digits.length - 1] += 1;
         for (int i = digits.length - 1; i > 0; i--) {
-            System.out.println(i);
             if (digits[i] == 10) {
                 digits[i] = 0;
                 digits[i - 1] += 1;
