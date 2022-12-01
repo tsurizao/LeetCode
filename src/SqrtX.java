@@ -1,19 +1,18 @@
 public class SqrtX {
     public static int mySqrt(int x) {
+        if(x == 1){
+            return 1;
+        }
         double squareRoot = 0;
-        double decimal = 1;
-        for (double i = x; i > 0; i--) {
-            if (i * i <= x) {
-                squareRoot += i;
+        for (double i = 0; i < x; i++) {
+            if (i * i > x) {
                 break;
             }
+            squareRoot = i;
         }
-//        if (squareRoot < 0) {
-//            squareRoot *= -1;
-//        }
-//        if (squareRoot % .1 >= 5) {
-//            squareRoot += 1;
-//        }
+        if (squareRoot < 0) {
+            squareRoot *= -1;
+        }
         return (int) squareRoot;
     }
 }
