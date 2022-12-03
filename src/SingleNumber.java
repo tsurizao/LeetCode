@@ -1,16 +1,22 @@
+import java.util.Arrays;
+
 public class SingleNumber {
     public static int singleNumber(int[] nums) {
-        for (int i = 0; i < nums.length - 1; i++) {
-            for (int j = 0; j < nums.length - 1; j++) {
-                if (i == j) {
+        int single = -1;
+        for(int i = 0;i < nums.length;i++){
+            boolean match = false;
+            for(int j = 0;j < nums.length;j++){
+                if(i == j){
                     continue;
-                }
-                if (nums[i] == nums[j]) {
+                } if(nums[i] == nums[j]){
+                    match = true;
                     break;
                 }
             }
-            return nums[i];
+            if(!match){
+                return nums[i];
+            }
         }
-        return -1;
+        return single;
     }
 }
