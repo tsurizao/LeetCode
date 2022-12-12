@@ -13,23 +13,15 @@ public class ClimbingStairs {
             if (numberOfTwos > 0) {
                 for (int i = 0; i < numberOfTwos; i++) {
                     remainingSteps -= 2;
-                    if (remainingSteps == 1) {
+                    if (remainingSteps < 2) {
                         break;
                     }
-                    if (remainingSteps == 0) {
-                        distinctWaysToClimb += 1;
-                    }
                 }
             }
-            for (int i = 0; i < remainingSteps; i++) {
-                remainingSteps -= 1;
-                if (remainingSteps == 0) {
-                    distinctWaysToClimb++;
-                    break;
-                }
-            }
+            distinctWaysToClimb++;
             numberOfTwos--;
-            if (numberOfTwos < 0) {
+            remainingSteps = n;
+            if (numberOfTwos == -1) {
                 break;
             }
         }
