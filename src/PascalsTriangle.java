@@ -11,15 +11,13 @@ public class PascalsTriangle {
         firstRow.add(1);
         rows.add(firstRow);
         for (int i = 1; i < numRows; i++) {
-            System.out.println("outer loop");
             List<Integer> previousRow = rows.get(i - 1);
             List<Integer> currentRow = new ArrayList<>();
-            int iterations = previousRow.size();
-            for(int j = 0;j <= iterations;j++){
-                System.out.println("inner loop");
-                currentRow.add(i + j);
+            currentRow.add(1);
+            for(int j = 1;j < i;j++){
+                currentRow.add(previousRow.get(j - 1) + previousRow.get(j));
             }
-            currentRow.add(i);
+            currentRow.add(1);
             rows.add(currentRow);
         }
         return rows;
