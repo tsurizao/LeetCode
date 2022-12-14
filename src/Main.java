@@ -8,9 +8,6 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        int numRows = 0;
-//        System.out.println(PascalsTriangle.generate(5));
-//        System.out.println(PascalsTriangle.generate(1));
-        System.out.println(PascalsTriangle.generate(12));
+
     }
 }
