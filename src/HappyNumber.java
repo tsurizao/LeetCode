@@ -8,7 +8,31 @@ public class HappyNumber {
 //    Those numbers for which this process ends in 1 are happy.
 //    Return true if n is a happy number, and false if not.
 
-    public static boolean isHappy(int n){
-        return true;
+    public static boolean isHappy(int n) {
+        int num = n;
+        int sum = 0;
+        int k = 0;
+        while (true) {
+            if (num < 1) {
+                return false;
+            }
+            if (num == 1) {
+                return true;
+            }
+            while (num != 0) {
+                if (k > 1000) {
+                    return true;
+                }
+                sum += (num % 10) * (num % 10);
+                num /= 10;
+            }
+            num = sum;
+            sum = 0;
+            k++;
+            if (k > 1000) {
+                return false;
+            }
+
+        }
     }
 }
