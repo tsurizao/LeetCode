@@ -20,9 +20,6 @@ public class HappyNumber {
                 return true;
             }
             while (num != 0) {
-                if (k > 1000) {
-                    return true;
-                }
                 sum += (num % 10) * (num % 10);
                 num /= 10;
             }
@@ -32,7 +29,6 @@ public class HappyNumber {
             if (k > 1000) {
                 return false;
             }
-
         }
     }
 }
