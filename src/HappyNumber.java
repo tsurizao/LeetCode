@@ -26,7 +26,7 @@ public class HappyNumber {
             num = sum;
             sum = 0;
             k++;
-            if (k > 1000) {
+            if (k > 100) {
                 return false;
             }
         }
