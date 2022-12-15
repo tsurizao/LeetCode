@@ -9,8 +9,9 @@ public class Main {
      */
 
     public static void main(String[] args) {
-//        System.out.println("true - " + HappyNumber.isHappy(1));
-//        System.out.println("false - " + HappyNumber.isHappy(2));
-//        System.out.println("true - " + HappyNumber.isHappy(19));
+
+        System.out.println(ValidParentheses.isValid("()"));
+        System.out.println(ValidParentheses.isValid("(){}[]"));
+        System.out.println(ValidParentheses.isValid("(]"));
     }
 }

@@ -1,16 +1,15 @@
 import java.util.Locale;
 
 public class ValidParentheses {
+    //        Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+//
+//                An input string is valid if:
+//
+//        Open brackets must be closed by the same type of brackets.
+//                Open brackets must be closed in the correct order.
+//        Every close bracket has a corresponding open bracket of the same type.
     public static boolean isValid(String s) {
-        // return once Stack / LIFO has been researched
-        for (int i = 0; s.length() > 1; i++) {
-            System.out.println(s);
-            s = s.replace("()", "");
-            System.out.println(s);
-            s = s.replace("[]", "");
-            System.out.println(s);
-            s = s.replace("{}", "");
-        }
-        return s.length() == 0;
+
+        return true;
     }
 }
