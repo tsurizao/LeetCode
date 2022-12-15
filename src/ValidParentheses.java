@@ -13,11 +13,11 @@ public class ValidParentheses {
         Stack<Character> parenBank = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             System.out.println("i: " + s.charAt(i) + " ||| " + "bank: " + parenBank);
-            if (s.charAt(i) == ')' && parenBank.peek() == '(') {
+            if (s.charAt(i) == ')' && !parenBank.isEmpty() && parenBank.peek() == '(') {
                 parenBank.pop();
-            } else if (s.charAt(i) == '}' && parenBank.peek() == '{') {
+            } else if (s.charAt(i) == '}' && !parenBank.isEmpty() && parenBank.peek() == '{') {
                 parenBank.pop();
-            } else if (s.charAt(i) == ']' && parenBank.peek() == '[') {
+            } else if (s.charAt(i) == ']' && !parenBank.isEmpty() && parenBank.peek() == '[') {
                 parenBank.pop();
             } else {
                 parenBank.push(s.charAt(i));
