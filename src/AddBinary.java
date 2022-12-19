@@ -38,8 +38,7 @@ public class AddBinary {
         System.out.println("Multiplier = " + multiplier);
 
         // Place to store sum as a binary String
-        String binaryTotal = "";
-
+        StringBuilder binaryTotal = new StringBuilder();
 
         // Loop to convert number total into a binary String
         for (int i = 0; multiplier > 0; i++) {
@@ -48,15 +47,19 @@ public class AddBinary {
             // otherwise adds a "0".  The loop then proceeds to add a "1" or "0"
             // as long as the multiplier is not equal to 0.
             if (numTotal - multiplier >= 0) {
-                binaryTotal += "1";
+                binaryTotal.append("1");
                 numTotal -= multiplier;
             } else {
-                binaryTotal += "0";
+                binaryTotal.append("0");
             }
 
             // Divides previous multiplier value by 2 every iteration, loop condition
             multiplier /= 2;
         }
-        return binaryTotal;
+        if (binaryTotal.charAt(0) == '0') {
+            binaryTotal.deleteCharAt(0);
+        }
+
+        return binaryTotal.toString();
     }
 }
