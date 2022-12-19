@@ -15,8 +15,12 @@ public class AddBinary {
         // Multiplier multiplied by 2 everytime the loop iterates.  Simulates binary values 1, 2, 4, 8, 16 etc.
         int multiplier = 1;
 
+        // Needed to determine higher amount of binary places to check,
+        // works same as if (a > b) then {length = a} else {length = b}
+        int length = Math.max(a.length(), b.length());
+
         // Loop to convert binary integers to number integers
-        for (int i = a.length(); i > 0; i--) {
+        for (int i = length; i > 0; i--) {
 
             // Extracts the last number (0 or 1) and multiplies it to the multiplier everytime the loop runs
             // Adds the values to numA and numB respectively
@@ -56,6 +60,8 @@ public class AddBinary {
             // Divides previous multiplier value by 2 every iteration, loop condition
             multiplier /= 2;
         }
+
+        // Removes leading 0's if any
         if (binaryTotal.charAt(0) == '0') {
             binaryTotal.deleteCharAt(0);
         }
