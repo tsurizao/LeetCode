@@ -41,14 +41,20 @@ public class AddBinary {
         String binaryTotal = "";
 
 
-        // Loop to revert to number total into a binary String
-        for (int i = 0; multiplier > 1; i++) {
+        // Loop to convert number total into a binary String
+        for (int i = 0; multiplier > 0; i++) {
+
+            // If the numTotal minus multiplier is not negative it adds "1",
+            // otherwise adds a "0".  The loop then proceeds to add a "1" or "0"
+            // as long as the multiplier is not equal to 0.
             if (numTotal - multiplier >= 0) {
                 binaryTotal += "1";
                 numTotal -= multiplier;
             } else {
                 binaryTotal += "0";
             }
+
+            // Divides previous multiplier value by 2 every iteration, loop condition
             multiplier /= 2;
         }
         return binaryTotal;
