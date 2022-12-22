@@ -37,10 +37,10 @@ public class AddBinary {
         BigInteger numTotal = numA.add(numB);
 
         // Printing to check that everything works so far (Works as intended thus far)
-        System.out.println("A = " + numA);
-        System.out.println("B = " + numB);
-        System.out.println("T = " + numTotal);
-        System.out.println("M = " + multiplier);
+        System.out.println("numA = " + numA);
+        System.out.println("numB = " + numB);
+        System.out.println("numTotal = " + numTotal);
+        System.out.println("multiplier = " + multiplier);
 
         // Place to store sum as a binary String
         StringBuilder binaryTotal = new StringBuilder();
