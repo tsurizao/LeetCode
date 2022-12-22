@@ -6,18 +6,17 @@ public class AddBinary {
 
     public static String addBinary(String a, String b) {
 
-        // Variables will keep the sum of each binary input as a number
+        // BigIntegers will keep the sum of each binary input as a number
         BigInteger numA = BigInteger.valueOf(0);
         BigInteger numB = BigInteger.valueOf(0);
 
         // Multiplier multiplied by 2 everytime the loop iterates.  Simulates binary values 1, 2, 4, 8, 16 etc.
         BigInteger multiplier = BigInteger.valueOf(1);
 
-        // Needed to determine higher amount of binary places to check,
-        // works same as if (a > b) then {length = a} else {length = b}
+        // length will equal the higher of the two strings
         int length = Math.max(a.length(), b.length());
 
-        // Loop to convert binary integers to number integers
+        // Loop to convert binary to number, BigInteger for extremely large numbers
         for (int i = length; i > 0; i--) {
             // Extracts the last character ('0' or '1'), converts to int and
             // multiplies with the multiplier variable.  Replaces old String with new
@@ -32,42 +31,39 @@ public class AddBinary {
                 b = b.substring(0, b.length() - 1);
             }
             multiplier = multiplier.multiply(BigInteger.valueOf(2));
-            System.out.println(multiplier);
         }
 
         // Variable that holds the sum of both converted binary numbers
         BigInteger numTotal = numA.add(numB);
 
         // Printing to check that everything works so far (Works as intended thus far)
-        System.out.println("A = " + numA + " /// B = " + numB);
-        System.out.println("Total = " + numTotal);
-        System.out.println("Multiplier = " + multiplier);
+        System.out.println("A = " + numA);
+        System.out.println("B = " + numB);
+        System.out.println("T = " + numTotal);
+        System.out.println("M = " + multiplier);
 
         // Place to store sum as a binary String
         StringBuilder binaryTotal = new StringBuilder();
 
-        System.out.println("==================");
         // Loop to convert number total into a binary String
         // Divides previous multiplier value by 2 every iteration, loop condition
-        while (multiplier.intValue() >= 1) {
+        while (multiplier.compareTo(BigInteger.ZERO) >= 1) {
             // If the numTotal minus multiplier is not negative it adds "1",
             // otherwise adds a "0".  The loop then proceeds to add a "1" or "0"
             // as long as the multiplier is not equal to 0.
             if (numTotal.subtract(multiplier).intValue() >= 0) {
                 binaryTotal.append("1");
                 numTotal = numTotal.subtract(multiplier);
-                System.out.println("TEST TEST BINARY TOTAL " + binaryTotal);
             } else {
                 binaryTotal.append("0");
-                System.out.println("TEST TEST BINARY TOTAL " + binaryTotal);
             }
+            multiplier = multiplier.divide(BigInteger.valueOf(2));
         }
 
         // Removes leading 0's if any
         if (binaryTotal.charAt(0) == '0') {
             binaryTotal.deleteCharAt(0);
         }
-
         return binaryTotal.toString();
     }
 }
