@@ -48,10 +48,13 @@ public class AddBinary {
         // Loop to convert number total into a binary String
         // Divides previous multiplier value by 2 every iteration, loop condition
         while (multiplier.compareTo(BigInteger.ZERO) >= 1) {
+
+            System.out.println(numTotal);
+            System.out.println(multiplier);
             // If the numTotal minus multiplier is not negative it adds "1",
             // otherwise adds a "0".  The loop then proceeds to add a "1" or "0"
             // as long as the multiplier is not equal to 0.
-            if (numTotal.subtract(multiplier).intValue() >= 0) {
+            if (numTotal.subtract(multiplier).compareTo(BigInteger.ZERO) >= 0) {
                 binaryTotal.append("1");
                 numTotal = numTotal.subtract(multiplier);
             } else {
