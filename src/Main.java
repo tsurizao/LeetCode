@@ -20,7 +20,7 @@ public class Main {
 
         //
 
-//        System.out.println(RemoveDuplicatesFromSortedList.deletedDuplicates());
+//        System.out.println(RemoveDuplicatesFromSortedList.deleteDuplicates());
 
     }
 }
