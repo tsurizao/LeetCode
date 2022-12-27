@@ -23,11 +23,17 @@ public class RemoveDuplicatesFromSortedList {
 //    such that each element appears only once. Return the linked list sorted as well.
 
     public ListNode deleteDuplicates(ListNode head) {
+
+        // Save head as node, allows LinkedList to be traversed by saving each iteration as the .next
         ListNode node = head;
+
         while (node != null && node.next != null) {
+            // If the values of node and node.next are the same, we change the current node.next to node.next.next
+            // Effectively removing the next node from the chain
             if (node.val == node.next.val) {
                 node.next = node.next.next;
             } else {
+                // If node.val and node.next.val are NOT the same, moves on to the next node
                 node = node.next;
             }
         }
