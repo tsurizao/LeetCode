@@ -22,15 +22,23 @@ public class RemoveDuplicatesFromSortedList {
 //    Given the head of a sorted linked list, delete all duplicates
 //    such that each element appears only once. Return the linked list sorted as well.
 
-    public static ListNode deleteDuplicates(ListNode head) {
+    public ListNode deleteDuplicates(ListNode head) {
 
+        // Initialize a LinkedList and add the first node
         LinkedList<ListNode> sortedList = new LinkedList<>();
         sortedList.add(head);
+        if(head == null){
+            ListNode empty = new ListNode();
+            return empty;
+        }
 
+        // Iterate through input and add all nodes
         for (int i = 0; sortedList.get(i).next != null; i++) {
             sortedList.add(sortedList.get(i).next);
         }
 
+        // nested loop will take and compare nodes at index i vs nodes at index j,
+        // if matched, i.next will be set to j.next which severs j from the chain
         for (int i = 0; i < sortedList.size(); i++) {
             if (sortedList.size() > 1) {
                 for (int j = i + 1; j < sortedList.size(); j++) {
