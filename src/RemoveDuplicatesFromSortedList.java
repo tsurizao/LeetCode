@@ -30,7 +30,17 @@ public class RemoveDuplicatesFromSortedList {
         for (int i = 0; sortedList.get(i).next != null; i++) {
             sortedList.add(sortedList.get(i).next);
         }
-        sortedList.
+
+        for (int i = 0; i < sortedList.size(); i++) {
+            if (sortedList.size() > 1) {
+                for (int j = i + 1; j < sortedList.size(); j++) {
+                    if (sortedList.get(i).val == sortedList.get(j).val) {
+                        sortedList.get(i).next = sortedList.get(j).next;
+                    }
+                }
+            }
+        }
+
         return sortedList.get(0);
     }
 }
