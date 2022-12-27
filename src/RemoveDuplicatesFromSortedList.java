@@ -24,15 +24,15 @@ public class RemoveDuplicatesFromSortedList {
 
     public ListNode deleteDuplicates(ListNode head) {
 
+        // Returns ListNode with no fields populated if head is null
+        if (head == null) {
+            return new ListNode();
+        }
         // Initialize a LinkedList and add the first node
         LinkedList<ListNode> sortedList = new LinkedList<>();
         sortedList.add(head);
-        if(head == null){
-            ListNode empty = new ListNode();
-            return empty;
-        }
 
-        // Iterate through input and add all nodes
+        // Iterate through input node and add all nodes, if any
         for (int i = 0; sortedList.get(i).next != null; i++) {
             sortedList.add(sortedList.get(i).next);
         }
