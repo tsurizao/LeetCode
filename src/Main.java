@@ -5,7 +5,7 @@ public class Main {
 
     /**
      * -=([{ Current unworkable exercises }])=-
-     *
+     * NONE
      */
 
     public static void main(String[] args) {
