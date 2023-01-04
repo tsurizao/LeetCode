@@ -6,15 +6,18 @@ import java.util.Stack;
 
 public class BinaryTreeInorderTraversal {
 
+    // Class defined by exercise, is required to properly access node fields
     public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
 
-        TreeNode() {}
+        TreeNode() {
+        }
 
         TreeNode(int val) {
-            this.val = val;}
+            this.val = val;
+        }
 
         TreeNode(int val, TreeNode left, TreeNode right) {
             this.val = val;
@@ -24,21 +27,15 @@ public class BinaryTreeInorderTraversal {
     }
 
     public List<Integer> inorderTraversal(TreeNode root) {
+        // Stack class/data structure -- Using to store values
         Stack<TreeNode> valuesStack = new Stack<>();
+
+        // Creating new TreeNode object to traverse/iterate through
         TreeNode node = root;
-        while(node != null || !valuesStack.isEmpty()){
-            if(node != null){
-                valuesStack.push(node);
-                node = node.left;
-            }
-            if(node == null){
-                node = valuesStack.peek();
-                valuesStack.pop();
-                node = node.right;
-            }
-        }
+
         List<Integer> values = new ArrayList<>();
-        while(!valuesStack.empty()){
+        while (!valuesStack.empty()) {
+            System.out.println(valuesStack.peek().val);
             values.add(valuesStack.peek().val);
             valuesStack.pop();
         }
