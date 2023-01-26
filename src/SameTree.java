@@ -24,7 +24,7 @@ public class SameTree {
         }
     }
 
-    // Simple solution that uses recursion, if at any point a method call
+    // Simple solution that uses recursion, if at any point a recursive method call
     // returns false, the original method returns false as well.
     public boolean sameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) return true;

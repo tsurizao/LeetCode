@@ -10,18 +10,17 @@ public class NumberOf1Bits {
      */
 
     public static int hammingWeight(int n) {
-        String nString = Integer.toString(n);
-        System.out.println(nString);
         System.out.println(n);
-        int x = 0;
-        for (int i = 0; i < nString.length(); i++) {
-            System.out.println("i = " + i);
-            System.out.println("nString character" + nString.charAt(nString.length() - 1 - i));
-            if (nString.charAt(nString.length() - 1 - i) != '0') {
-                x++;
-            }
-        }
-        System.out.println("X = " + x);
-        return x;
+//        int x = 0;
+//        for (int i = 0; n > 0; i++) {
+//            if (n % 2 != 0) {
+//                n -= 1;
+//                x++;
+//            } else {
+//                n /= 2;
+//                x++;
+//            }
+//        }
+        return Integer.bitCount(n);
     }
 }
