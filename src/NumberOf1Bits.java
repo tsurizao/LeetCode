@@ -11,16 +11,9 @@ public class NumberOf1Bits {
 
     public static int hammingWeight(int n) {
         System.out.println(n);
-//        int x = 0;
-//        for (int i = 0; n > 0; i++) {
-//            if (n % 2 != 0) {
-//                n -= 1;
-//                x++;
-//            } else {
-//                n /= 2;
-//                x++;
-//            }
-//        }
+
+        // bitCount(int i) is a built-in Java method found at ...
+        // https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#bitCount-int-
         return Integer.bitCount(n);
     }
 }
