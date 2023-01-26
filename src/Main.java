@@ -12,6 +12,7 @@ public class Main {
 
 //        System.out.println(BinaryTreeInorderTraversal.inorderTraversal());
 //        System.out.println(SameTree.sameTree());
+        System.out.println(NumberOf1Bits.hammingWeight(11));
 
     }
 }
