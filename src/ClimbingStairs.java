@@ -8,12 +8,10 @@ public class ClimbingStairs {
         int x1 = 1;
         int x2 = 0;
         int xn = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= n; i++) {
             xn = x1 + x2;
             x1 = x2;
             x2 = xn;
-            System.out.println("i = " + i);
-            System.out.println("Fibonacci number = " + xn);
         }
         return xn;
     }
