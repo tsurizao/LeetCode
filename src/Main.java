@@ -20,9 +20,12 @@ public class Main {
 //        //actual input 11111111111111111111111111111101
 //        System.out.println(NumberOf1Bits.hammingWeight(-3));
 
-        System.out.println(BestTimeToBuyAndSellStock.maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
-        System.out.println(BestTimeToBuyAndSellStock.maxProfit(new int[]{7, 6, 4, 3, 1}));
-        System.out.println(BestTimeToBuyAndSellStock.maxProfit(new int[]{1, 2}));
+//        System.out.println(BestTimeToBuyAndSellStock.maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
+//        System.out.println(BestTimeToBuyAndSellStock.maxProfit(new int[]{7, 6, 4, 3, 1}));
+//        System.out.println(BestTimeToBuyAndSellStock.maxProfit(new int[]{1, 2}));
+
+        System.out.println(ClimbingStairs.climbStairs(2));
+        System.out.println(ClimbingStairs.climbStairs(3));
 
     }
 }
