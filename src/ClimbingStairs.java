@@ -7,10 +7,18 @@ public class ClimbingStairs {
     public static int climbStairs(int n) {
         if(n == 1) return 1;
         if(n == 2) return 2;
+        int waysToClimb = 0;
         if(n % 2 == 0){
-            return n * 2;
+            for(int i = 0;i < n;i++){
+                waysToClimb += 2;
+            }
+            return waysToClimb;
         } else {
-            return n * 2 + 1;
+            for(int i = 0;i < n;i++){
+                waysToClimb += 2;
+            }
+            waysToClimb +=1 ;
+            return waysToClimb;
         }
     }
 }
