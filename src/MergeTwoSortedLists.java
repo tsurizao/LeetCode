@@ -32,7 +32,7 @@ public class MergeTwoSortedLists {
         if (list1 == null) {
             return list2;
         }
-        if(list2 == null){
+        if (list2 == null) {
             return list1;
         }
 
