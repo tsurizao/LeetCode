@@ -1,5 +1,7 @@
 import javax.security.auth.login.CredentialNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class ReverseList {
 
@@ -28,15 +30,23 @@ public class ReverseList {
     }
 
     public static ListNode reverseList(ListNode head) {
+        if(head == null){
+            return null;
+        }
         ListNode node = head;
         ArrayList<ListNode> nodeList = new ArrayList<>();
         while (node != null) {
             nodeList.add(node);
             node = node.next;
         }
-        for (int i = nodeList.size() - 1; i > 0; i--) {
-            nodeList.get(i).next = nodeList.get(i - 1);
+        Collections.reverse(nodeList);
+        for (int i = 0; i < nodeList.size(); i++) {
+            if(nodeList.get(i) == nodeList.get(nodeList.size() - 1)){
+                nodeList.get(i).next = null;
+                continue;
+            }
+            nodeList.get(i).next = nodeList.get(i + 1);
         }
-        return nodeList.get(nodeList.size() - 1);
+        return nodeList.get(0);
     }
 }
