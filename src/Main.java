@@ -30,6 +30,6 @@ public class Main {
 //        System.out.println("5 should have 8 ways = " + ClimbingStairs.climbStairs(5));
 //        System.out.println("7 should have 21 ways = " + ClimbingStairs.climbStairs(7));
 
-
+//        ReverseList.reverseList(ListNode);
     }
 }
