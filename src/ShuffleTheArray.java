@@ -7,15 +7,13 @@ public class ShuffleTheArray {
      * Return the array in the form [x1,y1,x2,y2,...,xn,yn].
      */
 
-    public static int[] shuffle(int[] arr, int n) {
-        System.out.println("Starting Array" + Arrays.toString(arr));
+    public static int[] shuffle(int[] nums, int n) {
         int[] newArray = new int[n * 2];
         int j = 0;
         for (int i = 0; i < newArray.length; i += 2, j++) {
-            newArray[i] = arr[j];
-            newArray[i + 1] = arr[n + j];
+            newArray[i] = nums[j];
+            newArray[i + 1] = nums[n + j];
         }
-        System.out.print("Solution Answer ");
         return newArray;
     }
 }
