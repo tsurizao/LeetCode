@@ -9,15 +9,13 @@ public class ShuffleTheArray {
 
     public static int[] shuffle(int[] arr, int n) {
         System.out.println("Starting Array" + Arrays.toString(arr));
-        int halfIndex = arr.length / 2;
-        int[] newArray = new int[arr.length];
-        for (int i = 0; i < n; i++) {
-            newArray[i] = arr[i];
-            newArray[i + 1] = arr[halfIndex];
-            halfIndex++;
-            i++;
-            System.out.println(Arrays.toString(newArray));
+        int[] newArray = new int[n * 2];
+        int j = 0;
+        for (int i = 0; i < newArray.length; i += 2, j++) {
+            newArray[i] = arr[j];
+            newArray[i + 1] = arr[n + j];
         }
+        System.out.print("Solution Answer ");
         return newArray;
     }
 }
