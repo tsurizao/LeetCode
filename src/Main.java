@@ -11,9 +11,11 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println(Arrays.toString(ShuffleTheArray.shuffle(new int[]{1, 1, 2, 2}, 2)));
+        System.out.println("Correct Answer: 1, 2, 1, 2");
         System.out.println(Arrays.toString(ShuffleTheArray.shuffle(new int[]{2, 5, 1, 3, 4, 7}, 3)));
+        System.out.println("Correct Answer: 2, 3, 5, 4, 1, 7");
         System.out.println(Arrays.toString(ShuffleTheArray.shuffle(new int[]{1, 2, 3, 4, 4, 3, 2, 1}, 4)));
-
+        System.out.println("Correct Answer: 1, 4, 2, 3, 3, 2, 4, 1");
 
     }
 }
