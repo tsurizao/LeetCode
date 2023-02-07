@@ -18,6 +18,8 @@ public class Main {
 //        System.out.println("Correct Answer: 1, 4, 2, 3, 3, 2, 4, 1");
 
         System.out.println("Answer should be 2 -> " + AddDigits.addDigits(38));
+        System.out.println("Answer should be 2 -> " + AddDigits.addDigits(4736));
+        System.out.println("Answer should be 9 -> " + AddDigits.addDigits(123456789));
 
     }
 }
