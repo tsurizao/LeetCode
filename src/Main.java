@@ -17,9 +17,11 @@ public class Main {
 //        System.out.println(Arrays.toString(ShuffleTheArray.shuffle(new int[]{1, 2, 3, 4, 4, 3, 2, 1}, 4)));
 //        System.out.println("Correct Answer: 1, 4, 2, 3, 3, 2, 4, 1");
 
-        System.out.println("Answer should be 2 -> " + AddDigits.addDigits(38));
-        System.out.println("Answer should be 2 -> " + AddDigits.addDigits(4736));
-        System.out.println("Answer should be 9 -> " + AddDigits.addDigits(123456789));
+//        System.out.println("Answer should be 2 -> " + AddDigits.addDigits(38));
+//        System.out.println("Answer should be 2 -> " + AddDigits.addDigits(4736));
+//        System.out.println("Answer should be 9 -> " + AddDigits.addDigits(123456789));
+
+        System.out.println();
 
     }
 }
