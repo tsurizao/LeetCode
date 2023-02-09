@@ -21,7 +21,8 @@ public class Main {
 //        System.out.println("Answer should be 2 -> " + AddDigits.addDigits(4736));
 //        System.out.println("Answer should be 9 -> " + AddDigits.addDigits(123456789));
 
-        System.out.println();
+        System.out.println("Answer should be [0,1,2,4,5,3] : " + Arrays.toString(BuildArrayFromPermutation.buildArray(new int[]{0, 2, 1, 5, 3, 4})));
+        System.out.println("Answer should be [4,5,0,1,2,3] : " + Arrays.toString(BuildArrayFromPermutation.buildArray(new int[]{5, 0, 1, 2, 3, 4})));
 
     }
 }
