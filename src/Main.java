@@ -24,7 +24,10 @@ public class Main {
 //        System.out.println("Answer should be [0,1,2,4,5,3] : " + Arrays.toString(BuildArrayFromPermutation.buildArray(new int[]{0, 2, 1, 5, 3, 4})));
 //        System.out.println("Answer should be [4,5,0,1,2,3] : " + Arrays.toString(BuildArrayFromPermutation.buildArray(new int[]{5, 0, 1, 2, 3, 4})));
 
-        System.out.println("Correct Answer -> 309.65000, 97.70000 Output ->" + Arrays.toString(ConvertTheTemperature.convertTemperature(36.50)));
-        System.out.println("Correct Answer -> 395.26000, 251.79800 Output ->" + Arrays.toString(ConvertTheTemperature.convertTemperature(122.11)));
+//        System.out.println("Correct Answer -> 309.65000, 97.70000 Output ->" + Arrays.toString(ConvertTheTemperature.convertTemperature(36.50)));
+//        System.out.println("Correct Answer -> 395.26000, 251.79800 Output ->" + Arrays.toString(ConvertTheTemperature.convertTemperature(122.11)));
+
+        System.out.println(DefangingAnIPAddress.defangIPaddr("1.1.1.1"));
+        System.out.println(DefangingAnIPAddress.defangIPaddr("255.100.50.0"));
     }
 }

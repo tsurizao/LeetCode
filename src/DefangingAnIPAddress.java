@@ -5,6 +5,14 @@ public class DefangingAnIPAddress {
 //    A defanged IP address replaces every period "." with "[.]".
 
     public static String defangIPaddr(String address) {
-        return "-1";
+        StringBuilder defanged = new StringBuilder();
+        for(int i = 0;i < address.length();i++){
+            if(address.charAt(i) == '.'){
+                defanged.append("[.]");
+                continue;
+            }
+            defanged.append(address.charAt(i));
+        }
+        return defanged.toString();
     }
 }
