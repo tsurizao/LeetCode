@@ -27,7 +27,9 @@ public class Main {
 //        System.out.println("Correct Answer -> 309.65000, 97.70000 Output ->" + Arrays.toString(ConvertTheTemperature.convertTemperature(36.50)));
 //        System.out.println("Correct Answer -> 395.26000, 251.79800 Output ->" + Arrays.toString(ConvertTheTemperature.convertTemperature(122.11)));
 
-        System.out.println(DefangingAnIPAddress.defangIPaddr("1.1.1.1"));
-        System.out.println(DefangingAnIPAddress.defangIPaddr("255.100.50.0"));
+//        System.out.println(DefangingAnIPAddress.defangIPaddr("1.1.1.1"));
+//        System.out.println(DefangingAnIPAddress.defangIPaddr("255.100.50.0"));
+
+        System.out.println("Answer is 1 -> " + FinalValueOfVariableAfterPerformingOperations.finalValueAfterOperations(new String[]{"--X", "X++", "X++"}));
     }
 }
