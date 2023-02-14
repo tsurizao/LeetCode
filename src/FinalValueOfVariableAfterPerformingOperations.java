@@ -9,12 +9,11 @@ public class FinalValueOfVariableAfterPerformingOperations {
     public static int finalValueAfterOperations(String[] operations){
         int x = 0;
         for (String operation : operations) {
-            if (operation.equalsIgnoreCase("--x") || operation.equalsIgnoreCase("x--")) {
+            if ((operation.charAt(0) == '-') || (operation.charAt(2) == '-')) {
                 x--;
             } else {
                 x++;
             }
-
         }
         return x;
     }
