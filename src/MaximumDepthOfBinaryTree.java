@@ -18,10 +18,10 @@ public class MaximumDepthOfBinaryTree {
 
 
     public static int maxDepth(TreeNode root) {
-        // If initial node is not null, then it's automatically 1 (1 + whatever returned recursively)
-        // then check both left and right of the current node, continues recursively
-        // until entire tree is checked.  Math.max chooses the highest number at each recursive call
-        // Decided to use ternary operator instead of regular if statement.
+        // If initial node is not null, then it's automatically 1 + whatever returns
+        // recursively, either 1 or 0.  Each side is checked each current node, then
+        // continues recursively until entire tree is checked.  Math.max chooses the highest
+        // of the two recursive calls.  At any point if a null node is found, it adds 0 to the total
         return root == null ? 0 : 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
     }
 }
