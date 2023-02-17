@@ -32,9 +32,11 @@ public class Main {
 
 //        System.out.println("Answer is 1 -> " + FinalValueOfVariableAfterPerformingOperations.finalValueAfterOperations(new String[]{"--X", "X++", "X++"}));
 
-        System.out.println("Answer should be 4 -> " + NumberOfGoodPairs.numIdenticalPairs(new int[]{1, 2, 3, 1, 1, 3}));
-        System.out.println("Answer should be 6 -> " + NumberOfGoodPairs.numIdenticalPairs(new int[]{1, 1, 1, 1}));
-        System.out.println("Answer should be 0 -> " + NumberOfGoodPairs.numIdenticalPairs(new int[]{1, 2, 3}));
+//        System.out.println("Answer should be 4 -> " + NumberOfGoodPairs.numIdenticalPairs(new int[]{1, 2, 3, 1, 1, 3}));
+//        System.out.println("Answer should be 6 -> " + NumberOfGoodPairs.numIdenticalPairs(new int[]{1, 1, 1, 1}));
+//        System.out.println("Answer should be 0 -> " + NumberOfGoodPairs.numIdenticalPairs(new int[]{1, 2, 3}));
 
+        System.out.println(JewelsAndStones.numJewelsInStones("aA", "aAAbbbb"));
+        System.out.println(JewelsAndStones.numJewelsInStones("z", "ZZ"));
     }
 }
