@@ -36,7 +36,11 @@ public class Main {
 //        System.out.println("Answer should be 6 -> " + NumberOfGoodPairs.numIdenticalPairs(new int[]{1, 1, 1, 1}));
 //        System.out.println("Answer should be 0 -> " + NumberOfGoodPairs.numIdenticalPairs(new int[]{1, 2, 3}));
 
-        System.out.println(JewelsAndStones.numJewelsInStones("aA", "aAAbbbb"));
-        System.out.println(JewelsAndStones.numJewelsInStones("z", "ZZ"));
+//        System.out.println(JewelsAndStones.numJewelsInStones("aA", "aAAbbbb"));
+//        System.out.println(JewelsAndStones.numJewelsInStones("z", "ZZ"));
+
+        System.out.println(Arrays.toString(RunningSumOf1DArray.runningSum(new int[]{1, 2, 3, 4})));
+        System.out.println(Arrays.toString(RunningSumOf1DArray.runningSum(new int[]{1, 1, 1, 1, 1})));
+        System.out.println(Arrays.toString(RunningSumOf1DArray.runningSum(new int[]{3, 1, 2, 10, 1})));
     }
 }
